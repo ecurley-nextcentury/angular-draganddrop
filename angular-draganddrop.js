@@ -1,5 +1,6 @@
 /*! Angular draganddrop v0.2.1 | (c) 2013 Greg Bergé | License MIT */
 
+(function(){
 angular
 .module('draganddrop', [])
 .directive('draggable', draggableDirective)
@@ -194,3 +195,4 @@ function dropDirective($parse) {
     }
   };
 }
+})();
