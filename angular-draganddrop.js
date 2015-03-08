@@ -151,7 +151,7 @@ function dropDirective($parse) {
             });
           }, event);
         }
-        if (typeof type === 'function') return type(toArray(event.dataTransfer.types));
+        if (typeof type === 'function') return type(toArray(event.dataTransfer.types), event);
 
         return false;
       }
