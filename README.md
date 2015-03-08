@@ -1,3 +1,7 @@
+Fork of https://github.com/neoziro/angular-draganddrop
+
+Reason for forking is that I need more fine access to drop-accept, where different places within the target element. Main reason for this is drag and drop to a canvas, which has its own accept methods.
+
 # angular-draganddrop
 [![Build Status](https://travis-ci.org/neoziro/angular-draganddrop.svg?branch=master)](https://travis-ci.org/neoziro/angular-draganddrop)
 [![Dependency Status](https://david-dm.org/neoziro/angular-draganddrop.svg?theme=shields.io)](https://david-dm.org/neoziro/angular-draganddrop)
