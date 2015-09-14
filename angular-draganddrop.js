@@ -30,7 +30,7 @@ function draggableDirective() {
       var effectAllowed = attrs.effectAllowed;
       var draggableData = attrs.draggableData;
       var draggableType = attrs.draggableType;
-      var draggable = attrs.draggable === 'false' ? false : true;
+      var draggable = attrs.draggable !== 'false';
 
       // Make element draggable or not.
       domElement.draggable = draggable;
@@ -43,7 +43,7 @@ function draggableDirective() {
 
         // Eval and serialize data.
         var data = scope.$eval(draggableData);
-        var jsonData =  angular.toJson(data);
+        var jsonData =  angular.toJson(data) || angular.toJson(data(e));
 
         // Set drag data and drag type.
         e.dataTransfer.setData('json/' + draggableType, jsonData);
